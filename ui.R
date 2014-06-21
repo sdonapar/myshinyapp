@@ -4,9 +4,9 @@ shinyUI(pageWithSidebar(
         headerPanel("Predict Your Car Milage"),
         sidebarPanel(
                 h5('Instructions'),
-                p('This app will predict the milage of your car in miles/US aallon. 
-                  Please select the appropriate parameters from the right panel and click on Predict
-                  button'),
+                p('This app will predict the milage of your car in miles/US gallon. 
+                  Please select the appropriate parameters from the right panel and 
+                  you will see the milage of your car at the bottom'),
                 h5('Predection Model Information'),
                 p('The data used for modelling was extracted from the 1974 Motor Trend US magazine, 
                   and comprises fuel consumption and 10 aspects of automobile design 
@@ -14,8 +14,8 @@ shinyUI(pageWithSidebar(
                 p('Linear Regression is used to predict the outcome ')
         ),
         mainPanel(
-                #textInput("", label= h5("Car name"),
-                #         value="Enter your car name....." ),
+                textInput("carname", label= h5("Enter Car name"),
+                         value="Ford" ),
                 selectInput("cyl",label=h5("Number of Cylenders"),
                             choices=list("4" = 4, "6" = 6, "8" = 8 ),
                             selected = 6),
@@ -28,5 +28,5 @@ shinyUI(pageWithSidebar(
                 #actionButton("predict", label = "Predict"),
                 br(),
                 br(),
-                h2(textOutput("text1"))
+                h3(textOutput("text1"))
         )))
