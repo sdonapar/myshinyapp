@@ -15,7 +15,7 @@ shinyUI(pageWithSidebar(
         ),
         mainPanel(
                 textInput("carname", label= h5("Enter Car name"),
-                         value="Ford" ),
+                         value="Mazda RX4" ),
                 selectInput("cyl",label=h5("Number of Cylenders"),
                             choices=list("4" = 4, "6" = 6, "8" = 8 ),
                             selected = 6),
